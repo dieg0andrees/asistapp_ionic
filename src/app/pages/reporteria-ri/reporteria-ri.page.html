@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <div class="logo_duoc">
+    <img src="/assets/images/logo_duoc.png" alt="Logo Duoc">
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <h2>Reportería</h2>
+    </ion-list-header>
+
+    <div class="contenedor">
+      <!-- Columna de nombres -->
+      <div class="columna izquierda">
+        <ion-card class="asignatura-card" *ngFor="let nombre of nombres">
+          <ion-card-content>
+            <p>{{ nombre }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <!-- Columna de asistencia (Presente o Ausente) -->
+      <div class="columna derecha">
+        <ion-card class="asistencia-card" *ngFor="let estado of aprobados" [ngClass]="estado ? 'aprobado' : 'reprobado'">
+          <ion-card-content>
+            <p>{{ estado ? 'Aprobado' : 'Reprobado' }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-list>
+
+  <div class="botones-container">
+    <ion-button class="descargar-xls-btn" (click)="descargarXls()">
+      Descargar .xls
+    </ion-button>
+    <ion-button class="descargar-pdf-btn" (click)="descargarPdf()">
+      Descargar PDF
+    </ion-button>
+    <ion-button class="volver-btn" (click)="volverqr()">
+      Volver a cursos
+    </ion-button>
+  </div>
+</ion-content>

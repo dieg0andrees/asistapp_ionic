@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="logo_duoc">
+    <img src="/assets/images/logo_duoc.png" alt="Logo Duoc">
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <h2>Asistencia</h2>
+    </ion-list-header>
+
+    <div class="contenedor">
+      <!-- Columna de nombres -->
+      <div class="columna izquierda">
+        <ion-card class="asignatura-card" *ngFor="let nombre of nombres">
+          <ion-card-content>
+            <p>{{ nombre }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <!-- Columna de asistencia (Presente o Ausente) -->
+      <div class="columna derecha">
+        <ion-card class="asistencia-card" *ngFor="let presente of asistencia" [ngClass]="presente ? 'presente' : 'ausente'">
+          <ion-card-content>
+            <p>{{ presente ? 'Presente' : 'Ausente' }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-list>
+
+  <ion-button class="volver-btn" (click)="volverqr()">
+    Volver a QR
+  </ion-button>
+</ion-content>

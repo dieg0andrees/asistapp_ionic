@@ -1,0 +1,74 @@
+.logo_duoc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 200px;
+    padding-top: 20px;
+}
+
+.logo_duoc img {
+    max-width: 250px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.asignaturas {
+    margin-top: 20px;
+}
+
+ion-list-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.izquierda {
+    flex: 3; /* La columna de asignaturas toma más espacio */
+    margin-right: 5px; /* Separación mínima entre las columnas */
+}
+
+.derecha {
+    flex: 1; /* La columna de asistencia toma menos espacio */
+}
+
+.asignatura-card,
+.asistencia-card {
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 0; /* Sin borde redondeado para efecto "pegado" */
+    margin-bottom: 0; /* Sin espacio entre tarjetas */
+    margin-right: 0; /* Sin espacio lateral */
+}
+
+.asignatura-card ion-card-content {
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.asistencia-card ion-card-content {
+    text-align: right;
+    font-size: 1.3rem;
+    width: 80px; /* Tamaño pequeño para los cuadros de porcentaje */
+    margin-left: auto; /* Alinea a la derecha */
+}
+.volver-btn {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    --background: #007bff;
+    --color: #fff;
+}

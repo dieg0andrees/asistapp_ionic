@@ -1,0 +1,28 @@
+ion-content {
+  --background: #4d4d4de3; /* Reemplaza con el color deseado */
+}
+.logo_duoc {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: flex-start;  /* Alinea la imagen en la parte superior */
+  height: 200px;            /* Ajusta la altura del contenedor */
+  padding-top: 20px;        /* Añade espacio desde la parte superior */
+}
+
+.logo_duoc img {
+  max-width: 250px;
+  height: auto;
+}
+
+.splash_imagen {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  margin-top: 20px;         /* Ajusta la separación vertical */
+  text-align: center;
+}
+
+.splash_spinner {
+  display: flex;
+  justify-content: center;  /* Centra el spinner horizontalmente */
+  align-items: center;      /* Centra el spinner verticalmente */
+}

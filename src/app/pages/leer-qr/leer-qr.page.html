@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <div class="logo_duoc">
+    <img src="../../../assets/images/logo_duoc.png" alt="">
+  </div>
+  <div class="qr_imagen">
+    <img src="../../../assets/images/qr_camara.png" alt="">
+  </div>
+
+  
+  <ion-range min="1" max="5" step="0.1" value="1">
+    <ion-label slot="start">1x</ion-label>
+    <ion-label slot="end">5x</ion-label>
+  </ion-range>
+
+  <div class="botones_qr">
+    <ion-button (click)="qr_exito()">
+      QR escaneado
+    </ion-button>
+    <ion-button (click)="qr_no_exito()">
+      QR no escaneado
+    </ion-button>
+  </div>
+  
+  <ion-button class="volver-btn" (click)="volver()">
+    Volver
+  </ion-button>
+</ion-content>

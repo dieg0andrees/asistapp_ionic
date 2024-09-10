@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true">
+  <div class="logo_duoc">
+    <!-- Verifica que la ruta de la imagen sea correcta -->
+    <img src="/assets/images/logo_duoc.png" alt="Logo Duoc">
+  </div>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Asistencia</ion-label>
+    </ion-list-header>
+
+    <div class="contenedor">
+      <!-- Columna de asignaturas -->
+      <div class="columna izquierda">
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Pedro Perez</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Tomas Alarcon</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Jose Ibarra</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Raul Caceres</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Isac Perez</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Felipe Galdames</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="asignatura-card">
+          <ion-card-content>
+            <p>Sofia Gonzalez</p>
+          </ion-card-content>
+        </ion-card>
+        <!-- Añadir más asignaturas aquí -->
+      </div>
+
+      <!-- Columna de asistencia (solo porcentaje) -->
+      <div class="columna derecha">
+        <ion-card *ngFor="let asistencia of asistencias" [ngClass]="{'asistencia-bajo': asistencia < 70, 'asistencia-alto': asistencia >= 70}" class="asistencia-card">
+          <ion-card-content>
+            <p>{{ asistencia }}%</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-list>
+
+  <ion-button class="volver-btn" (click)="volver()">
+    Volver
+  </ion-button>
+</ion-content>

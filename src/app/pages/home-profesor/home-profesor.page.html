@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <div class="logo_duoc">
+    <img src="../../../assets/images/logo_duoc.png" alt="">
+  </div>
+  
+  <div class="bienvenido_profesor">
+    <h3>Bienvenido <span class="usuario_profesor">{{usuario}}</span></h3>
+  </div>
+
+  <div class="botones">
+    <ion-button  (click)="listar_cursos()">
+      Listar Cursos
+    </ion-button>
+    <ion-button (click)="qr()">
+      QR
+    </ion-button>
+    <ion-button (click)="reporteria()">
+      Reportería
+    </ion-button>
+    <ion-button (click)="cerrar_sesion()" color="danger">
+      Cerrar Sesión
+    </ion-button>
+  </div>
+</ion-content>
