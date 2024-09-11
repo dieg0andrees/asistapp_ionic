@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { SplashPageRoutingModule } from './splash-routing.module';
 
 import { SplashPage } from './splash.page';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SplashPageRoutingModule
+    SplashPageRoutingModule,
+    MatSlideToggleModule,
+    MatProgressBarModule,
   ],
   declarations: [SplashPage]
 })

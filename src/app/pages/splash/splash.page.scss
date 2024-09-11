@@ -22,7 +22,6 @@ ion-content {
 }
 
 .splash_spinner {
-  display: flex;
-  justify-content: center;  /* Centra el spinner horizontalmente */
-  align-items: center;      /* Centra el spinner verticalmente */
+  width: 50%;
+  margin: 0 auto
 }
