@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-restablecer',
   templateUrl: './restablecer.page.html',
@@ -7,11 +8,10 @@ import { NavController } from '@ionic/angular';
 })
 export class RestablecerPage implements OnInit {
 
-  usuario : string = ''
-  nueva_contrasena : string = ''
-  nueva_contrasena2 : string = ''
+  email : string = ''
+  codigo : string = ''
   
-  constructor(private navCtrl:NavController) { }
+  constructor(private navCtrl:NavController, private alertCtrl:AlertController) { }
 
   ngOnInit() {
   }
@@ -19,4 +19,13 @@ export class RestablecerPage implements OnInit {
     this.navCtrl.navigateForward('/login')
   }
 
+  async enviar_codigo() {
+    const alert = await this.alertCtrl.create({
+      header: '¡Exito!',
+      message: 'Se han enviado a tu email las instrucciones para cambiar la contraseña',
+      buttons: ['Aceptar'],
+    });
+
+    await alert.present();
+  }
 }
